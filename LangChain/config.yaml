@@ -1,0 +1,18 @@
+# config.yaml
+llm:
+  base_url: "https://api.deepseek.com"
+  model: "deepseek-flash"
+  temperature: 0.3
+
+prompt:
+  system_prompt: "你是一个简洁的技术助手，回答简短精炼。"
+  human_template: "请用通俗语言解释：{topic}"
+
+demo:
+  default_topic: "LangChain是什么"
+  enable_token_stats: true
+  enable_cost_calc: true       # 开启费用计算
+  enable_csv_log: true         # 开启csv日志保存
+  # DeepSeek deepseek-chat 官方参考单价：单位：元 / 百万token
+  price_input_per_million: 0.02
+  price_output_per_million: 0.04

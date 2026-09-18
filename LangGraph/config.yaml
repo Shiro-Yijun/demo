@@ -1,0 +1,20 @@
+# LLM配置
+llm:
+  base_url: "https://api.deepseek.com"
+  model_name: "deepseek-flash"
+  temperature: 0.3
+  streaming: true
+
+# 重试&校验配置
+retry:
+  max_retry: 2
+  min_answer_length: 100  # 答案最小字符长度，用来代码校验
+
+# DeepSeek 单价（单位：美元 / 1M tokens，参考官网）
+price:
+  input_token_price: 0.02
+  output_token_price: 0.04
+
+# 日志配置
+log:
+  csv_file: "llm_log.csv"
